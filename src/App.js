@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState }  from 'react';
 import './index.css';
 
 const questions = [
@@ -27,7 +26,7 @@ const questions = [
 function Result({ correct }) {
   return (
     <div className="result">
-      <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" />
+      <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" alt='salut' />
       <h2>Вы отгадали {correct} ответа из {questions.length}</h2>
       <a href='/'>
         <button>Попробовать снова</button>
@@ -60,7 +59,7 @@ function App() {
   const onClickVariant = (index) => {
     setStep(step + 1)
 
-    if (index == question.correct) {
+    if (index === question.correct) {
       setCorrect(correct + 1)
     }
   }
